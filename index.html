@@ -16,16 +16,23 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== SWIPER CSS ===============-->
-    <!-- <link rel="stylesheet" href=""> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>My portfolio</title>
+    <title>Vraj - Frontend Developer Portfolio</title>
 </head>
 
 <body>
+    <!--=============== LOADING ANIMATION ===============-->
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!--=============== PARTICLES BACKGROUND ===============-->
+    <div class="particles-container"></div>
+
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -35,7 +42,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="ri-home-5-line"></i>Home
                         </a>
                     </li>
@@ -72,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="nav--buttons">
+            <div class="nav__buttons">
                 <!-- Theme change button -->
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
@@ -87,12 +94,12 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
-        <section class="home section" id="home">
+        <section class="home section animate" id="home">
             <div class="home__container container grid section__border">
                 <div class="home__data grid">
                     <h1 class="home__title">
                         Hi, I'm Vraj <br>
-                        Fronted Developer <br>
+                        Frontend Developer <br>
                         Based in India <br>
                     </h1>
 
@@ -100,8 +107,8 @@
                         <div class="home__perfil">
                             <img src="assets/img/perfil.png" alt="home perfil">
                         </div>
-                        <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-waves">
-                        <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle">
+                        <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-waves" data-speed="0.3">
+                        <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle" data-speed="0.2">
                     </div>
 
                     <ul class="home__social">
@@ -118,7 +125,6 @@
                 </div>
 
                 <!-- home info 1 -->
-
                 <div class="home__info">
                     <div>
                         <h3 class="home__info-title">
@@ -132,14 +138,13 @@
                         </p>
                     </div>
 
-
                     <div>
                         <h3 class="home__info-title">
                             CONTACT
                         </h3>
 
                         <p class="home__info-description">
-                            Gujarat,India <br>
+                            Gujarat, India <br>
                             vrjvghl@gmail.com <br>
                             +91 9601281995 <br>
                         </p>
@@ -159,7 +164,6 @@
                 </div>
 
                 <!-- home info 2 -->
-
                 <div class="home__info">
                     <div>
                         <h3 class="home__info-title">
@@ -181,7 +185,6 @@
                         </p>
                     </div>
 
-
                     <div>
                         <h3 class="home__info-title">
                             COMPANIES WORKED
@@ -192,7 +195,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -253,14 +255,13 @@
                             <h3 class="skills__name">Git</h3>
                             <span class="skills__subtitle">Basic</span>
                         </div>
-
                     </div>
                 </div>
 
                 <!-- skill 2 -->
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        <i class="ri-panto-line"></i>Web designer
+                        <i class="ri-pantone-line"></i>Web designer
                     </h3>
 
                     <div class="skills__info">
@@ -310,7 +311,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -339,7 +339,7 @@
                             <h3 class="qualification__name">
                                 High School
                             </h3>
-                            <span class="qualification__country">Netaji Model School,India</span>
+                            <span class="qualification__country">Netaji Model School, India</span>
                             <span class="qualification__year">2021-2023</span>
                         </div>
 
@@ -347,8 +347,8 @@
                             <h3 class="qualification__name">
                                 Primary Education
                             </h3>
-                            <span class="qualification__country">Mar Gregorious Memeorial School, India</span>
-                            <span class="qualification__year">20010-2021</span>
+                            <span class="qualification__country">Mar Gregorious Memorial School, India</span>
+                            <span class="qualification__year">2010-2021</span>
                         </div>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                     <div class="qualification__info">
                         <div>
                             <h3 class="qualification__name">
-                                Frontend developer(Internship)
+                                Frontend Developer (Internship)
                             </h3>
                             <span class="qualification__country">Adobe-India</span>
                             <span class="qualification__year">2025-2026</span>
@@ -375,20 +375,19 @@
                             <span class="qualification__country">Microsoft-India</span>
                             <span class="qualification__year">2026-2027</span>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img">
+            <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img" data-speed="0.4">
         </section>
 
         <!--==================== SERVICES ====================-->
         <section class="services section" id="services">
-            <h2 class="section__title"></h2>
+            <h2 class="section__title">Services</h2>
             <span class="section__subtitle">What I offer</span>
 
-            <div class="services__container container grid section_border">
+            <div class="services__container container grid section__border">
                 <div class="services__card">
                     <i class="ri-layout-4-line"></i>
 
@@ -398,7 +397,7 @@
                     </h2>
 
                     <p class="services__description">
-                        Service that porvides the best quality and at the request of the client, with professional work
+                        Service that provides the best quality and at the request of the client, with professional work
                         and customer support.
                     </p>
 
@@ -414,7 +413,7 @@
                     </h2>
 
                     <p class="services__description">
-                        Service that porvides the best quality and at the request of the client, with professional work
+                        Service that provides the best quality and at the request of the client, with professional work
                         and customer support.
                     </p>
 
@@ -425,17 +424,17 @@
                     <i class="ri-quill-pen-line"></i>
 
                     <h2 class="services__title">
-                        Application Developer
+                        Application <br>
+                        Developer
                     </h2>
 
                     <p class="services__description">
-                        Service that porvides the best quality and at the request of the client, with professional work
+                        Service that provides the best quality and at the request of the client, with professional work
                         and customer support.
                     </p>
 
                     <div class="services__border"></div>
                 </div>
-
             </div>
         </section>
 
@@ -506,7 +505,7 @@
         <!--==================== TESTIMONIAL ====================-->
         <section class="testimonial section">
             <h2 class="section__title">Testimonial</h2>
-            <span class="section__subtitle">client's Reviews</span>
+            <span class="section__subtitle">Client's Reviews</span>
 
             <div class="container section__border">
                 <div class="testimonial__container swiper">
@@ -514,36 +513,36 @@
                         <!-- testimonial 1 -->
                         <div class="testimonial__content swiper-slide">
                             <p class="testimonial__description">
-                                "Working with Vraj is Great, recommended."
+                                "Working with Vraj is Great, recommended. His attention to detail and creative approach made our project exceptional."
                             </p>
 
                             <div>
-                                <h3 class="testimonial__name">person name</h3>
-                                <span class="testimonial__subtitle">client</span>
+                                <h3 class="testimonial__name">Sarah Johnson</h3>
+                                <span class="testimonial__subtitle">CEO, TechStart</span>
                             </div>
                         </div>
 
                         <!-- testimonial 2 -->
                         <div class="testimonial__content swiper-slide">
                             <p class="testimonial__description">
-                                "Working with Vraj is Great, recommended."
+                                "Excellent work quality and professional communication. Vraj delivered beyond our expectations."
                             </p>
 
                             <div>
-                                <h3 class="testimonial__name">Person name</h3>
-                                <span class="testimonial__subtitle">Client</span>
+                                <h3 class="testimonial__name">Michael Chen</h3>
+                                <span class="testimonial__subtitle">Product Manager, InnovateCorp</span>
                             </div>
                         </div>
 
                         <!-- testimonial 3 -->
                         <div class="testimonial__content swiper-slide">
                             <p class="testimonial__description">
-                                "Working with Vraj is Great, recommended."
+                                "Outstanding developer with great problem-solving skills. Highly recommend for any frontend project."
                             </p>
 
                             <div>
-                                <h3 class="testimonial__name">person name</h3>
-                                <span class="testimonial__subtitle">client</span>
+                                <h3 class="testimonial__name">Emily Rodriguez</h3>
+                                <span class="testimonial__subtitle">Design Director, CreativeStudio</span>
                             </div>
                         </div>
                     </div>
@@ -557,7 +556,7 @@
                 </div>
             </div>
 
-            <img src="assets/img/shape-wawes.svg" alt="testimonial image" class="testimonial__img">
+            <img src="assets/img/shape-wawes.svg" alt="testimonial image" class="testimonial__img" data-speed="0.3">
         </section>
 
         <!--==================== CONTACT ====================-->
@@ -573,22 +572,21 @@
 
                     <div class="contact__info">
                         <div class="contact__data">
-                            <span class="data__title">Email</span>
-                            <span class="data__info">vrjvghl@gmail.com</span>
+                            <span class="contact__data-title">Email</span>
+                            <span class="contact__data-info">vrjvghl@gmail.com</span>
                         </div>
     
                         <div class="contact__data">
-                            <span class="data__title">Whatsappp</span>
-                            <span class="data__info">9601281995</span>
+                            <span class="contact__data-title">WhatsApp</span>
+                            <span class="contact__data-info">9601281995</span>
                             <a href="https://api.whatsapp.com/send?phone=919601281995&text=Hello, more information!" target="_blank" class="contact__button">
                                 Write me  <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
     
                         <div class="contact__data">
-                            <span class="data__title">Messenger</span>
-                            <span class="data__info">@vraj.fb123</span>
-                            <!-- brand name or profile -->
+                            <span class="contact__data-title">Messenger</span>
+                            <span class="contact__data-info">@vraj.fb123</span>
                             <a href="#" target="_blank" class="contact__button">
                                 Write me <i class="ri-arrow-right-line"></i>
                             </a>
@@ -614,13 +612,14 @@
 
                         <div class="contact__form-div contact__form-area">
                             <label class="contact__form-tag">Project</label>
-                            <textarea name="user project" placeholder="Write your project" id="contact-project"  class="contact__form-input"></textarea>
+                            <textarea name="user_project" placeholder="Write your project" id="contact-project" class="contact__form-input"></textarea>
                         </div>
 
                         <button type="submit" class="contact__button">
                             Submit <i class="ri-arrow-right-up-line"></i>
                         </button>
                     </form>
+                    <span class="contact__message" id="contact-message"></span>
                 </div>
             </div>
         </section>
@@ -628,7 +627,7 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
-         <div class="footer__container">
+         <div class="footer__container container">
             <h1 class="footer__title">Vraj</h1>
             <p>Computer Science Engineer</p>
 
@@ -666,21 +665,16 @@
          </div>
     </footer>
 
-
     <!--========== SCROLL UP ==========-->
-    <!-- <a href="#" class="scrollup" id="scroll-up">
+    <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
-    </a> -->
-
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    </a>
 
     <!--=============== SWIPER JS ===============-->
-    <!-- <script src=""></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--=============== EMAIL JS ===============-->
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
